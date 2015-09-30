@@ -1,0 +1,301 @@
+%%
+%% The following code sets up the document formatting
+%%
+
+%this assumes that res_yy.sty is in some path
+\documentstyle[hyperref, margin, line]{res_yy}
+
+\hypersetup{backref,pdfpagemode=Full,colorlinks=False,backref,hidelinks}
+
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\voffset}{-0.30in}
+\addtolength{\textwidth}{1.00in} \addtolength{\textheight}{1.50in}
+
+\renewcommand{\namefont}{\LARGE\emph}
+
+% \newcommand{\hl}[1]{{#1}}
+\newcommand{\hl}[1]{{\bf #1}}
+
+
+%%
+%% The following code defines some macros for terms which have raised font
+%% (ie 4\fourth would result 4th with the 'th' raised (superscripted)
+%%
+
+\def\Cplusplus{{\rm C\raise.5ex\hbox{\small ++}}}
+\def\CSharp{{\rm C\raise.5ex\hbox{\small \#}}}
+% 'st' 'nd' 'rd' 'th' superscripts for numbers
+\def\first{{\raise.5ex\hbox{\small st}}}
+\def\second{{\raise.5ex\hbox{\small nd}}}
+\def\third{{\raise.5ex\hbox{\small rd}}}
+\def\fourth{{\raise.5ex\hbox{\small th}}}
+
+% Simpler bibsection for CV sections              
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+%%
+%% starting the actual document
+%%
+
+
+\begin{document}
+
+%the name in big fonts at the top of resume
+%this is left aligned
+\name{Honglin Yu}
+
+%this is right aligned
+\address{
+School of Computer Science, Australian National University, NICTA  \hspace{2.4cm} Email: honglin.yu@anu.edu.au 
+}
+\address{
+Homepage : \href{http://yuhonglin.github.io}{http://yuhonglin.github.io}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \hspace{4cm}   Mobile: +61 406502886
+}
+
+%\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+%\newlength{\rcollength}\setlength{\rcollength}{1.4in}%
+%
+%\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%\href{http://www.cse.osu.edu/}%
+%     {Department of Computer Science and Engineering} & \\
+%\href{http://www.osu.edu/}{The Ohio State University}
+%8151 33rd Ave S Unit 409   & 507-304-1668 \\
+%Bloomington, MN  55425     & \email{quic0038@umn.edu}\\
+%\end{tabular}
+
+\begin{resume}
+
+
+
+%%
+%% This section of code is inelegant, but I'm too lazy to fix it
+%%
+
+\section{\textsc{Research  Interests}}
+\ \ \ Data Mining, Machine Learning, Online Social Network Analysis
+%Stochastic Investment Models, Stochastic Mortality Models, Pensions, Derivatives Pricing, Risk Management
+
+\section{\textsc{Education}}
+
+\textbf{Australian National University}  \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   Aug. 2011 - present \\
+\emph{Ph.D. in Computer Science} 
+
+
+\begin{itemize}
+  \item Thesis Topic: Popularity Analysis of YouTube Videos
+    %   % \item Supervisors: Adam Butt (Chair), Bridget Browne, Tim Higgins, Kin-Yip Ho, Stuart Leckie
+  \item Work at Machine Learning group of NICTA
+  \item Thesis will be submitted before Aug. 2015
+  %\item Supervisors: Adam Butt(Chair), Bridget Browne, Tim Higgins, Kin-Yip Ho, Stuart Leckie 
+ \end{itemize}
+
+\textbf{Southeast University, China} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \   Aug. 2009 - Jul. 2011 \\ 
+\emph{Finished master course in Automation}
+
+\textbf{Southeast University, China} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ Aug. 2005 - June 2009 \\ 
+\emph{Bachelor of Automation} 
+
+ \begin{itemize}
+   \item Rank: 4/140
+   \item Best Graduation Thesis (2 out of 140)
+ \end{itemize}
+
+
+% \section{\textsc{Professional Designation}}
+% Working to complete the requirements for an \textbf{Associate of the Society of Actuaries (ASA)} \\
+% % Date expected to attain the designation: 2015 
+% Passed SOA Exams: P, FM, MFE 
+
+% \textbf{Chartered Enterprise Risk Analyst (Candidate)} 
+% \textbf{National Computer Rank Examination Certificate} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ 2007 \\ 
+% Computer Language: C 
+
+
+
+
+
+%%
+%% the meat of the resume starts now
+%%
+
+% \begin{formatb}
+%   \employer{} \dates{r}\\
+%   %\title{r}
+%   \location{l} \\
+%   \body\\
+% \end{formatb}
+
+\section{Skill Highlights}
+%\begin{bibsection} 
+\begin{itemize}
+\item Experienced in \hl{Data Science} and \hl{Statistical Analysis}
+  \begin{itemize}
+  \item Classification, regression, clustering, time series analysis
+  \item Data exploration and visualization (matplotlib, R, d3.js)
+  \item Working on large scale \hl{real data} for $>$3 years
+  \end{itemize}
+\item Broad knowledge in \hl{Machine Learning}
+  \begin{itemize}
+  \item Deep understanding of main-stream algorithms (SVM, Random Forest, ANN etc.)
+  \item Experienced in carrying out experiments and \hl{feature engineering}
+  \end{itemize}
+\item Firm programming skills, especially in \hl{C/C++} and \hl{python}
+  \begin{itemize}
+    \item Also familiar with SQL, Javascript, R, Julia
+    \item Use Linux everyday for more than 6 years, skilled emacs user
+  \end{itemize}      
+\item Experienced in collecting and analyzing large scale Internet data
+  \begin{itemize}
+    \item Skilled in implementing various online data \hl{crawlers}
+    \end{itemize}
+\item Domain knowledge related to Computational Social Science Research
+  \begin{itemize}
+  \item YouTube video popularity analysis
+  \item Twitter user network analysis
+  \end{itemize}
+\item  Basic controller design
+\end{itemize}
+%\end{bibsection}
+
+
+\section{\textsc{Research Projects}}
+% \begin{bibsection}
+\ \ \ \  Please see \href{http://yuhonglin.github.io/project/}{http://yuhonglin.github.io/project/} for more details \\
+\begin{itemize}
+%(90\% contribution: idea, data, methodology, and writing)
+\item \href{http://yuhonglin.github.io/2013/10/02/youtube-and-twitter.html}{Analyzing Twitter-driven YouTube Views}
+  \begin{itemize}
+  \item Predicting videos' viewcount with Twitter's feed (\href{http://cantabile.anu.edu.au/yt/demo/}{\bf Demo})
+  \item Contributions: Most of the ideas; All the Software implementation, data collection, analysis and prediction
+  \end{itemize}
+\item \href{http://yuhonglin.github.io/2014/08/31/visual-meme-sequence-analysis.html}{Data Mining on YouTube Video Shot Sequences}
+  \begin{itemize}
+  \item Mining frequent remixed shots from large number of videos
+  \item Contributions: Part of the ideas and data collection; All the implementation, data preprocessing and analysis
+  \end{itemize}
+\item \href{http://yuhonglin.github.io/2012/10/04/viewcount-phase.html}{Exploring the Phases of Popularity Evolution of YouTube Videos}
+  \begin{itemize}
+  \item Understanding viewcount dynamics by novel time series segmentation techniques
+  \item Contributions: Most of the ideas; All the software implementation, data collection, analysis and prediction
+  \end{itemize}    
+\end{itemize}
+%\end{bibsection}
+
+\begin{formatb}
+  \employer{l}\dates{r}\\
+  \body\\
+\end{formatb}
+
+\section{\textsc{Software Highlights}}
+\begin{itemize}
+\item \href{https://github.com/yuhonglin/YTCrawl}{YTcrawl}: a YouTube video history viewcount crawler
+\item SegFit : a time series segmentation algorithm written in C++
+\item \href{https://github.com/yuhonglin/shotdetect}{Shotdetect} : a video shot detection program written in C++
+\end{itemize}
+
+\section{\textsc{Media Coverage}}
+\begin{itemize}
+  \item {\bf ANU Reporter} \ \ {\it How the viral video star is born}. \ August 2015.\\
+    \url{http://www.anu.edu.au/news/all-news/how-the-viral-video-star-is-born}
+  \item {\bf NCI Research News} \ \ {\it Predicting popularity}. \ September 2015.\\
+    \url{http://nci.org.au/2015/09/30/predicting-popularity/}
+\end{itemize}
+
+
+\section{Papers}
+\begin{itemize}
+\item {\bf Honglin Yu}, Lexing Xie and Scott Sanner, Exploring the Popularity Phases of YouTube Videos: Observations, Insights, and Prediction. In proceeding of International AAAI Conference on Web and Social Media (ICWSM) 2015.
+\item {\bf Honglin Yu}, Lexing Xie and Scott Sanner, Twitter-driven YouTube Views: Beyond Individual Influencers. In proceeding of ACM Multimedia Conference (ACMM) 2014.  
+\end{itemize} 
+
+
+
+\section{\textsc{Teaching Experience}}
+\begin{itemize}
+  \item Computational Social Science Summer Short Course \ \ \ \ \ \ \ \ \  \ \ \ \hspace{3cm} Jul. 2013 \\
+    Teaching Assistant, Beihang University, China
+  \item Computer Network \ \ \ \ \ \ \ \ \ \ \ \ \ \hspace{9cm} 2011 \\
+    Teaching Assistant, Southeast University, China
+\end{itemize} 
+
+
+\section{\textsc{Awards}}
+\begin{itemize}
+% \item Postgraduate Scholarship of China Scholarship Council (CSC)  \hfill 2011
+\item Excellent Graduation Dissertation of Southeast University (2 out of 140) \hfill  2009
+\item Champion of the 3D Soccer Simulation League, Robocup Worldcup \hfill 2008
+\item National Mathematical Modeling Contest Third Prize of Jiangsu Province \hfill  2008
+\item Higher Mathematics Competition of Jiangsu Province, Third Prize \hfill 2006
+\end{itemize}
+
+\begin{formatb}
+  \employer{l}\dates{r}\\
+  \body\\
+\end{formatb}
+
+\section{\textsc{Review Experience}}
+\begin{itemize}
+  \item International World Wide Web Conference (WWW)
+  \item ACM International Conference on Web Search and Data Mining (WSDM)
+\end{itemize}
+
+
+\section{\textsc{Language}}
+Chinese (native) \hspace{3cm} English (fluent)
+
+
+
+%  \section{\textsc{References}}
+% \begin{ncolumn}{2}
+% Dr. Lexing Xie & Dr. Scott Sanner\\
+% Senior Lecturer  &  Assistant Professor  \\   
+% Research School of Computer Science & Computer Science  \\                                      
+% Australian National University & College of Engineering \\
+% affiliated with NICTA & Oregon State University \\
+% Email: lexing.xie@anu.edu.au & Email: scott.sanner@oregonstate.edu \\
+% Phone: (+61) 2 612 51646 & \\
+% \\
+
+% Dr. Henry Gardner \\ %& Dr. Kin-Yip, Ho \\    
+% Associate Professor and Reader \\
+% College of Engineering \& Computer Science \\ %& College of Business and Economics\\
+% Australian National University \\ % & Australian National University\\
+% Email:  henry.gardner@anu.edu.au\\ % & Email: kin-yip.ho@anu.edu.au\\
+% Phone: (+61) 2 612 58181 \\ %& Phone: (+61) 2 612 57299
+
+
+% \end{ncolumn}
+
+
+\end{resume}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
