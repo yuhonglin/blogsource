@@ -1,0 +1,52 @@
+<! -- header.html -->
+<meta charset="utf-8">
+<!-- mathjax -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<title>{{ page.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<meta name="author" content="{{ site.author.name }}">
+
+<!-- Enable responsive viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le styles -->
+<script type="text/javascript" src="{{ site.url }}/assets/resources/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/app.js"></script>
+
+<link href="{{ site.url }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ site.url }}/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{ site.url }}/assets/resources/syntax/syntax.css" rel="stylesheet">
+<link href="{{ site.url }}/assets/css/style.css" rel="stylesheet">
+
+<!-- Le fav and touch icons -->
+<!-- Update these with your own images
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+-->
+
+ <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+
+
+{% if page.custom_css %}
+  {% for stylesheet in page.custom_css %}
+  <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+  {% endfor %}
+{% endif %}
+
+{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+  <script src='{{ js_file }}' type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
+
+
+ 
+<! -- header.html end -->

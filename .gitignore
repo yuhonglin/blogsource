@@ -1,8 +1,2 @@
-*.pyc
-big_content/
-deploy/
-untracked/
-.hyde_deps
+_site/*
 *~
-.DS_Store
-

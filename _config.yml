@@ -1,0 +1,45 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+
+title: Honglin Yu
+description: 
+author:
+  name: Honglin
+  email: yuhonglin1986@gmail.com
+  github: yuhonglin
+  twitter: yuhonglin1986
+  pinterest: 
+  linkedin: 
+  bio:
+  email_md5: d5585155115642b123d2d3418809f425
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+markdown: kramdown
+
+BASE_PATH: http://yuhonglin.github.io
+paginate_path: "/project/page:num/"
+
+excerpt_separator: "<!--more-->"
+
+# All links will be namespaced by BASE_PATH if defined.
+# Links in your website should always be prefixed with {{ site.BASE_PATH }}
+# Do not put a "/" at the end of the url.
+#
+# CNAME (http://yourcustomdomain.com)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Pages (http://username.github.io)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Project Pages (http://username.github.io/project-name)
+#  A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
+#  REQUIRED! Set BASE_PATH to "http://username.github.io/project-name"
